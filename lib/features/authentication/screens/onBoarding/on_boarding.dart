@@ -15,11 +15,15 @@ class onBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //controller that will be shared
+    final pageController = PageController();
+    
     return Scaffold(
       body: Stack(
         children: [
-          ///hoprizontal scrollable pages
+          ///horizontal scrollable pages
           PageView(
+            controller: pageController, //controller
             children: const [
               onBoardingpage(
                 image: SImageStrings.onBoardingImage1,
@@ -43,7 +47,7 @@ class onBoardingScreen extends StatelessWidget {
           const onBoardingSkip(),
 
           ///dot navigation
-          const onBoardingNavigatioin(),
+          onBoardingNavigatioin(controller: pageController), // Pass controller here
 
           ///circular button
         ],
