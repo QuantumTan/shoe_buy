@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:get/get.dart';
 
 class SHelperFunctions {
@@ -96,7 +95,7 @@ class SHelperFunctions {
 
 
   /// Get screen width
-  static double screenWidth(BuildContext context) {
+  static double getScreenWidth(BuildContext context) {
     return MediaQuery.of(context).size.width;
   }
 

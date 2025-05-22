@@ -1,11 +1,5 @@
-import 'package:flutter/material.dart';
 
 class STexts{
-
-  //---ONBOARDING TEXTS---
-  static const String onBoardingTitle1 = "Choose your product";
-  static const String onBoardingTitle2 = "Select Payment Method";
-  static const String onBoardingTitle3 = "Deliver on your doorstep";
 
   static const String onBoardingSubTitle1 = "Welcome to the best online shoe shopping experience - Choose your Shoes";
   static const String onBoardingSubTitle2 = "Select your payment method - Pay with where you feel comfortable";
@@ -16,5 +10,15 @@ class STexts{
   static const String hopmeAppBarTitle = "Welcome to ShoeBuy";
   static const String hopmeAppBarSubTitle = "The best onliune shoe shopping experience";
 
+  // on boarding
 
+  static const String onBoardingSkip = "Skip";
+  static const String onBoardingNext = "Next";
+
+  static const String onBoardingTitle_browse = "Find Your Kicks";
+  static const onBoardingSubtitle_browse = "Explore the Latest Kicks – Styles for Every Step.";
+  static const onBoardingTitle_payment = "Set Payemnt";
+  static const onBoardingSubtitle_payment = "Pay Your Way – Secure and Seamless";
+  static const onBoardingTitle_shipping = "Get Them Delivered.";
+  static const onBoardingSubtitle_shipping = "Get Them Delivered – Fast, Secure, Right to You.";
 }

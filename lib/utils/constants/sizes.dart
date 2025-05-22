@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class SSizes {
   // Private constructor to prevent instantiation

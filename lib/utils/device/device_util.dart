@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:io';
 
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class DeviceUtil {
@@ -55,6 +54,10 @@ class DeviceUtil {
 
   static double getBottomNavigationBarHeight() {
     return kBottomNavigationBarHeight;
+  }
+
+  static double getAppBarHeight () {
+    return kToolbarHeight;
   }
 
   static Future<bool> isKeyboardVisible(BuildContext context) async {
