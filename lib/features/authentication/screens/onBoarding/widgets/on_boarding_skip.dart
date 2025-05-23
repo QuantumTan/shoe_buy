@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/sizes.dart';
 import 'package:shoe_buy/utils/device/device_util.dart';
 
@@ -12,7 +13,13 @@ class onBoardingSkip extends StatelessWidget {
     return Positioned(
       top: DeviceUtil.getAppBarHeight(),
       right: SSizes.defaultSpace,
-      child: TextButton(onPressed: () {}, child: const Text('Skip')),
+      child: TextButton(
+        onPressed: () {}, //on pressed currently null-- to do
+        child: const Text(
+          'Skip',
+          style: TextStyle(color: SColor.primaryColor),
+        ),
+      ),
     );
   }
 }

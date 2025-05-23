@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_button.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_nav.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_page.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_skip.dart';
@@ -50,9 +52,12 @@ class onBoardingScreen extends StatelessWidget {
           onBoardingNavigatioin(controller: pageController), // Pass controller here
 
           ///circular button
+         const onBoardingButton(),
         ],
       ),
     );
   }
 }
+
+
 
