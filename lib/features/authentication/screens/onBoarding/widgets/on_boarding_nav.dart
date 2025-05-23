@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:shoe_buy/features/authentication/controllers/on_boarding_controller.dart';
 import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/sizes.dart';
 import 'package:shoe_buy/utils/device/device_util.dart';
 import 'package:shoe_buy/utils/helpers/helper_functions.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class onBoardingNavigatioin extends StatelessWidget {
-  const onBoardingNavigatioin({
+class OnBoardingNavigation extends StatelessWidget {
+  const OnBoardingNavigation({
     super.key,
-    required this.controller, /// pass the controller
   });
-
-  final PageController controller; /// contoller to be passed
 
   @override
   Widget build(BuildContext context) {
-
+    //create the instance of teh controller
+    final controller = onBoaardingController.instance;
     final dark = SHelperFunctions.isDarkMode(context);
 
     return Positioned(
-      bottom: DeviceUtil.getBottomNavigationBarHeight() + 20,
       left: SSizes.defaultSpace,
-    
+      bottom: DeviceUtil.getBottomNavigationBarHeight() + 20,
       child: SmoothPageIndicator(
-        controller: controller, // use the controlled that has been passed
+        controller: controller.pageController,
+        onDotClicked: controller.dotNavigationClick,
         count: 3,
         effect: ExpandingDotsEffect(
           activeDotColor: dark ? SColor.dark : SColor.light,

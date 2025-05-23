@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shoe_buy/features/authentication/controllers/on_boarding_controller.dart';
 import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/sizes.dart';
 import 'package:shoe_buy/utils/device/device_util.dart';
@@ -20,8 +21,8 @@ class onBoardingButton extends StatelessWidget {
     return Positioned(
       right: SSizes.defaultSpace,
       bottom: DeviceUtil.getBottomNavigationBarHeight(),
-      child: ElevatedButton(onPressed: (){},
-      style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16), ), backgroundColor: dark ? SColor.primaryColor : Colors.black54),
-      child: const Icon(Iconsax.arrow_right_3),));
+      child: ElevatedButton(onPressed: (){onBoaardingController.instance.nextPage();},
+      style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18), ), backgroundColor: dark ? SColor.primaryColor : Colors.black54),
+      child: const Icon(Iconsax.arrow_right_3),),);
   }
 }

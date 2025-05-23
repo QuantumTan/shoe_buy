@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_button.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_nav.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_page.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_skip.dart';
-import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/image_strings.dart';
-import 'package:shoe_buy/utils/constants/sizes.dart';
 import 'package:shoe_buy/utils/constants/text_strings.dart';
-import 'package:shoe_buy/utils/device/device_util.dart';
-import 'package:shoe_buy/utils/helpers/helper_functions.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../../controllers/on_boarding_controller.dart';
+
 
 class onBoardingScreen extends StatelessWidget {
   const onBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    //controller that will be shared
-    final pageController = PageController();
+
+    final controller = Get.put(onBoaardingController());
     
     return Scaffold(
       body: Stack(
         children: [
           ///horizontal scrollable pages
           PageView(
-            controller: pageController, //controller
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
             children: const [
               onBoardingpage(
                 image: SImageStrings.onBoardingImage1,
@@ -49,7 +49,7 @@ class onBoardingScreen extends StatelessWidget {
           const onBoardingSkip(),
 
           ///dot navigation
-          onBoardingNavigatioin(controller: pageController), // Pass controller here
+          const OnBoardingNavigation(),
 
           ///circular button
          const onBoardingButton(),
@@ -58,6 +58,3 @@ class onBoardingScreen extends StatelessWidget {
     );
   }
 }
-
-
-
