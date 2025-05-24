@@ -16,7 +16,7 @@ class onBoardingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-  final dark = SHelperFunctions.isDarkMode(context);
+  //final dark = SHelperFunctions.isDarkMode(context); --not used ......
 
     return Positioned(
       right: SSizes.defaultSpace,
@@ -25,7 +25,7 @@ class onBoardingButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(), 
         backgroundColor: SColor.primaryColor,
-        fixedSize: const Size(60, 60), // Adjust these values as needed
+        fixedSize: const Size(60, 60),
       ),
       child: const Icon(Iconsax.arrow_right_3),),);
   }
