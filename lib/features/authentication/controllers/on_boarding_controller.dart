@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shoe_buy/features/authentication/screens/logIn/logIn.dart';
 
 class onBoaardingController extends GetxController {
 
@@ -21,8 +22,8 @@ class onBoaardingController extends GetxController {
 
   void nextPage() {
 
-    if(currentPage == 2){
-     // Get.to(LogInScreen());
+    if(currentPage.value == 2){
+      Get.to(LoginScreen());
     } else{
       int page = currentPage.value + 1;
       pageController.jumpToPage(page);
@@ -32,8 +33,11 @@ class onBoaardingController extends GetxController {
 
   void skipPage() {
 
-    currentPage.value = 2;
-    pageController.jumpTo(2);
+    // currentPage.value = 2;
+    // pageController.jumpTo(2);
+
+    Get.to(() => LoginScreen());
+  
 
 
   }

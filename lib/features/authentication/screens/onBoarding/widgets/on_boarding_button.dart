@@ -22,7 +22,11 @@ class onBoardingButton extends StatelessWidget {
       right: SSizes.defaultSpace,
       bottom: DeviceUtil.getBottomNavigationBarHeight(),
       child: ElevatedButton(onPressed: (){onBoaardingController.instance.nextPage();},
-      style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18), ), backgroundColor: dark ? SColor.primaryColor : Colors.black54),
+      style: ElevatedButton.styleFrom(
+        shape: const CircleBorder(), 
+        backgroundColor: SColor.primaryColor,
+        fixedSize: const Size(60, 60), // Adjust these values as needed
+      ),
       child: const Icon(Iconsax.arrow_right_3),),);
   }
 }

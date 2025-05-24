@@ -8,4 +8,8 @@ class SImageStrings {
   static const String onBoardingImage1 = 'assets/images/selecting.png';
   static const String onBoardingImage2 = 'assets/images/online-payment.png';
   static const String onBoardingImage3 = 'assets/images/delivery-service.png';
+
+  //login logo
+  static const String loginLight = "assets/images/ShoeBuy(forlight).png";
+  static const String loginDark = "assets/images/ShoeBuy(fordark).png";
 }
