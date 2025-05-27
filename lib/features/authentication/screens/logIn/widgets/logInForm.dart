@@ -138,7 +138,6 @@ class logInForm extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: SSizes.spaceBtwSections),
           ],
         ),
       ),

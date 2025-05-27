@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoe_buy/commons/styles/spacing_styles.dart';
 import 'package:shoe_buy/features/authentication/screens/logIn/widgets/logInForm.dart';
@@ -29,19 +30,44 @@ class LoginScreen extends StatelessWidget {
               logInForm(dark: dark),
 
               //divider
+              FormDivider(dividerText: STexts.orSignInWith.capitalize!),
+              const SizedBox(height: SSizes.spaceBtwSections),
+
+              //footer
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Divider(
-                    color: dark ? Colors.black87 : Colors.grey,
-                    thickness: 0.5,
-                    indent: 60,
-                    endIndent: 5,
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: SColor.dark),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        width: SSizes.iconMd,
+                        height: SSizes.iconMd,
+                        image: AssetImage(SImageStrings.google),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: SSizes.spaceBtwItems),
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: SColor.dark),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        width: SSizes.iconMd,
+                        height: SSizes.iconMd,
+                        image: AssetImage(SImageStrings.facebook),
+                      ),
+                    ),
                   ),
                 ],
               ),
-
-              //footer
             ],
           ),
         ),
@@ -50,3 +76,35 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
+class FormDivider extends StatelessWidget {
+  const FormDivider({super.key, required this.dividerText});
+
+  final String dividerText;
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = SHelperFunctions.isDarkMode(context);
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Flexible(
+          child: Divider(
+            color: dark ? Colors.grey : Colors.black87,
+            thickness: 0.5,
+            indent: 60,
+            endIndent: 5,
+          ),
+        ),
+        Text(dividerText, style: Theme.of(context).textTheme.labelMedium),
+        Flexible(
+          child: Divider(
+            color: dark ? Colors.grey : Colors.black87,
+            thickness: 0.5,
+            indent: 5,
+            endIndent: 60,
+          ),
+        ),
+      ],
+    );
+  }
+}

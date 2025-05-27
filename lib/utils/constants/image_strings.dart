@@ -12,4 +12,8 @@ class SImageStrings {
   //login logo
   static const String loginLight = "assets/images/ShoeBuy(forlight).png";
   static const String loginDark = "assets/images/ShoeBuy(fordark).png";
+
+  //socials
+  static const String google = "assets/images/google-icon.png";
+  static const String facebook = "assets/images/facebook-icon.png";
 }
