@@ -40,10 +40,9 @@ flutter:
   # Project assets
   assets:
   - assets/images/
-  - assets/icons/
-  - assets/logos/
+  #- assets/logos/
   - assets/fonts/
-  - assets/images/on_boarding_images/
+  #- assets/images/on_boarding_images/
 
 
 
