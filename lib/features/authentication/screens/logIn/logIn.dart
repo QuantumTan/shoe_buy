@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoe_buy/commons/styles/spacing_styles.dart';
+import 'package:shoe_buy/commons/widgets-login-signup/form_divider.dart';
+import 'package:shoe_buy/commons/widgets-login-signup/social_icons.dart';
 import 'package:shoe_buy/features/authentication/screens/logIn/widgets/logInForm.dart';
 import 'package:shoe_buy/features/authentication/screens/logIn/widgets/logInHeader.dart';
 import 'package:shoe_buy/utils/constants/image_strings.dart';
@@ -34,77 +36,11 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: SSizes.spaceBtwSections),
 
               //footer
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: SColor.dark),
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Image(
-                        width: SSizes.iconMd,
-                        height: SSizes.iconMd,
-                        image: AssetImage(SImageStrings.google),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: SSizes.spaceBtwItems),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: SColor.dark),
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Image(
-                        width: SSizes.iconMd,
-                        height: SSizes.iconMd,
-                        image: AssetImage(SImageStrings.facebook),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              socialButtonFooter(),
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class FormDivider extends StatelessWidget {
-  const FormDivider({super.key, required this.dividerText});
-
-  final String dividerText;
-
-  @override
-  Widget build(BuildContext context) {
-    final dark = SHelperFunctions.isDarkMode(context);
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Flexible(
-          child: Divider(
-            color: dark ? Colors.grey : Colors.black87,
-            thickness: 0.5,
-            indent: 60,
-            endIndent: 5,
-          ),
-        ),
-        Text(dividerText, style: Theme.of(context).textTheme.labelMedium),
-        Flexible(
-          child: Divider(
-            color: dark ? Colors.grey : Colors.black87,
-            thickness: 0.5,
-            indent: 5,
-            endIndent: 60,
-          ),
-        ),
-      ],
     );
   }
 }
