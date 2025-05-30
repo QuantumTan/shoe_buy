@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:shoe_buy/features/authentication/controllers/on_boarding_controller.dart';
 import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/sizes.dart';
@@ -9,9 +7,7 @@ import 'package:shoe_buy/utils/helpers/helper_functions.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingNavigation extends StatelessWidget {
-  const OnBoardingNavigation({
-    super.key,
-  });
+  const OnBoardingNavigation({super.key});
 
   @override
   Widget build(BuildContext context) {

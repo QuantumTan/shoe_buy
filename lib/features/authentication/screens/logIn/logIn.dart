@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:shoe_buy/commons/styles/spacing_styles.dart';
 import 'package:shoe_buy/commons/widgets-login-signup/form_divider.dart';
 import 'package:shoe_buy/commons/widgets-login-signup/social_icons.dart';
 import 'package:shoe_buy/features/authentication/screens/logIn/widgets/logInForm.dart';
 import 'package:shoe_buy/features/authentication/screens/logIn/widgets/logInHeader.dart';
-import 'package:shoe_buy/utils/constants/image_strings.dart';
-import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/sizes.dart';
 import 'package:shoe_buy/utils/constants/text_strings.dart';
 import 'package:shoe_buy/utils/helpers/helper_functions.dart';

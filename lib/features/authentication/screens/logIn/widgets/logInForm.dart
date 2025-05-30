@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shoe_buy/features/authentication/screens/signup/signupScreen.dart';
 import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/sizes.dart';
 import 'package:shoe_buy/utils/constants/text_strings.dart';
 
 class logInForm extends StatelessWidget {
-  const logInForm({
-    super.key,
-    required this.dark,
-  });
+  const logInForm({super.key, required this.dark});
 
   final bool dark;
 
@@ -16,9 +16,7 @@ class logInForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: SSizes.spaceBtwSections,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: SSizes.spaceBtwSections),
         child: Column(
           children: [
             //email
@@ -29,11 +27,9 @@ class logInForm extends StatelessWidget {
                 labelStyle: TextStyle(
                   color: dark ? Colors.white : Colors.black87,
                 ),
-    
+
                 // Add these properties
-                floatingLabelStyle: TextStyle(
-                  color: SColor.primaryColor,
-                ),
+                floatingLabelStyle: TextStyle(color: SColor.primaryColor),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: dark ? Colors.white : Colors.black87,
@@ -41,10 +37,7 @@ class logInForm extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: SColor.primaryColor,
-                    width: 2,
-                  ),
+                  borderSide: BorderSide(color: SColor.primaryColor, width: 2),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 fillColor: dark ? Colors.black : Colors.grey.shade200,
@@ -60,11 +53,9 @@ class logInForm extends StatelessWidget {
                 labelStyle: TextStyle(
                   color: dark ? Colors.white : Colors.black87,
                 ),
-                floatingLabelStyle: TextStyle(
-                  color: SColor.primaryColor,
-                ),
+                floatingLabelStyle: TextStyle(color: SColor.primaryColor),
                 suffix: Icon(Iconsax.eye_slash),
-    
+
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: dark ? Colors.white : Colors.black87,
@@ -72,20 +63,16 @@ class logInForm extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: SColor.primaryColor,
-                    width: 2,
-                  ),
+                  borderSide: BorderSide(color: SColor.primaryColor, width: 2),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 fillColor: dark ? Colors.black : Colors.grey.shade200,
                 filled: true,
               ),
-              obscureText:
-                  true, // hide pass text
+              obscureText: true, // hide pass text
             ),
             const SizedBox(height: SSizes.spaceBtwInputFields / 2),
-    
+
             //remember me and forgot pass
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -108,7 +95,7 @@ class logInForm extends StatelessWidget {
               ],
             ),
             const SizedBox(height: SSizes.spaceBtwSections),
-    
+
             //sign in button
             SizedBox(
               width: double.infinity,
@@ -117,9 +104,7 @@ class logInForm extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   STexts.signIn,
-                  style: TextStyle(
-                    color: dark ? Colors.black87 : Colors.white,
-                  ),
+                  style: TextStyle(color: dark ? Colors.black87 : Colors.white),
                 ),
               ),
             ),
@@ -129,12 +114,10 @@ class logInForm extends StatelessWidget {
               width: double.infinity,
               height: SSizes.buttonHeight + 30,
               child: OutlinedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const signupScreen()),
                 child: Text(
                   STexts.createAccount,
-                  style: TextStyle(
-                    color: dark ? Colors.black87 : Colors.white,
-                  ),
+                  style: TextStyle(color: dark ? Colors.black87 : Colors.white),
                 ),
               ),
             ),
@@ -144,4 +127,3 @@ class logInForm extends StatelessWidget {
     );
   }
 }
-
