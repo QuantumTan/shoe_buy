@@ -100,10 +100,62 @@ class signupScreen extends StatelessWidget {
               ///TODO
 
               ///terms and conditions
+              // code to review
               const SizedBox(height: SSizes.spaceBtwSections),
-              Row(children: []),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: Checkbox(value: false, onChanged: (value) {}),
+                  ),
+                  const SizedBox(width: SSizes.spaceBtwItems),
+                  Expanded(
+                    child: Text.rich(
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                            text: STexts.agreeToTerms,
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                          TextSpan(
+                            text: STexts.termsOfService,
+                            style: Theme.of(
+                              context,
+                            ).textTheme.bodySmall?.copyWith(
+                              color: Colors.blue,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                          TextSpan(
+                            text: ' and ',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                          TextSpan(
+                            text: STexts.privacyPolicy,
+                            style: Theme.of(
+                              context,
+                            ).textTheme.bodySmall?.copyWith(
+                              color: Colors.blue,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
 
               ///sign up button
+              const SizedBox(height: SSizes.spaceBtwSections),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text(STexts.createAccount),
+                ),
+              ),
             ],
           ),
         ),
