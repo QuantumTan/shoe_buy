@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_button.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_nav.dart';
 import 'package:shoe_buy/features/authentication/screens/onBoarding/widgets/on_boarding_page.dart';
@@ -10,15 +9,13 @@ import 'package:shoe_buy/utils/constants/text_strings.dart';
 
 import '../../controllers/on_boarding_controller.dart';
 
-
 class onBoardingScreen extends StatelessWidget {
   const onBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     final controller = Get.put(onBoaardingController());
-    
+
     return Scaffold(
       body: Stack(
         children: [
@@ -52,7 +49,7 @@ class onBoardingScreen extends StatelessWidget {
           const OnBoardingNavigation(),
 
           ///circular button
-         const onBoardingButton(),
+          const onBoardingButton(),
         ],
       ),
     );

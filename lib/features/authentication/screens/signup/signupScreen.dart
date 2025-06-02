@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/sizes.dart';
 import 'package:shoe_buy/utils/constants/text_strings.dart';
+import 'package:shoe_buy/utils/helpers/helper_functions.dart';
 
 // ignore: camel_case_types
 class signupScreen extends StatelessWidget {
@@ -9,6 +11,8 @@ class signupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = SHelperFunctions.isDarkMode(context);
+
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -56,9 +60,31 @@ class signupScreen extends StatelessWidget {
                     ///username
                     TextFormField(
                       expands: false,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: STexts.usernameLabel,
-                        prefixIcon: Icon(Iconsax.user_edit),
+                        labelStyle: TextStyle(
+                          color: dark ? Colors.white : Colors.black87,
+                        ),
+                        floatingLabelStyle: TextStyle(
+                          color: SColor.primaryColor,
+                        ),
+
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: dark ? Colors.white : Colors.black87,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: SColor.primaryColor,
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        fillColor: dark ? Colors.black : Colors.grey.shade200,
+                        filled: true,
+                        prefixIcon: const Icon(Iconsax.user_edit),
                       ),
                     ),
 
@@ -67,9 +93,31 @@ class signupScreen extends StatelessWidget {
                     ///email
                     TextFormField(
                       expands: false,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: STexts.emailLabel,
-                        prefixIcon: Icon(Iconsax.direct),
+                        labelStyle: TextStyle(
+                          color: dark ? Colors.white : Colors.black87,
+                        ),
+                        floatingLabelStyle: const TextStyle(
+                          color: SColor.primaryColor,
+                        ),
+
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: dark ? Colors.white : Colors.black87,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                            color: SColor.primaryColor,
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        fillColor: dark ? Colors.black : Colors.grey.shade200,
+                        filled: true,
+                        prefixIcon: const Icon(Iconsax.direct),
                       ),
                     ),
                     const SizedBox(height: SSizes.spaceBtwInputFields),
@@ -77,9 +125,31 @@ class signupScreen extends StatelessWidget {
                     ///number
                     TextFormField(
                       expands: false,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: STexts.phoneNumberLabel,
-                        prefixIcon: Icon(Iconsax.call),
+                        labelStyle: TextStyle(
+                          color: dark ? Colors.white : Colors.black87,
+                        ),
+                        floatingLabelStyle: const TextStyle(
+                          color: SColor.primaryColor,
+                        ),
+
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: dark ? Colors.white : Colors.black87,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                            color: SColor.primaryColor,
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        fillColor: dark ? Colors.black : Colors.grey.shade200,
+                        filled: true,
+                        prefixIcon: const Icon(Iconsax.call),
                       ),
                     ),
                     const SizedBox(height: SSizes.spaceBtwInputFields),
@@ -87,10 +157,32 @@ class signupScreen extends StatelessWidget {
                     ///password
                     TextFormField(
                       obscureText: true,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: STexts.passwordLabel,
-                        prefixIcon: Icon(Iconsax.password_check),
-                        suffixIcon: Icon(Iconsax.eye_slash),
+                        labelStyle: TextStyle(
+                          color: dark ? Colors.white : Colors.black87,
+                        ),
+                        floatingLabelStyle: const TextStyle(
+                          color: SColor.primaryColor,
+                        ),
+
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: dark ? Colors.white : Colors.black87,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                            color: SColor.primaryColor,
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        fillColor: dark ? Colors.black : Colors.grey.shade200,
+                        filled: true,
+                        prefixIcon: const Icon(Iconsax.password_check),
+                        suffixIcon: const Icon(Iconsax.eye_slash),
                       ),
                     ),
                   ],

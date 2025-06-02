@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoe_buy/features/authentication/screens/signup/signupScreen.dart';
 import 'package:shoe_buy/utils/constants/scolors.dart';
@@ -28,7 +27,7 @@ class logInForm extends StatelessWidget {
                   color: dark ? Colors.white : Colors.black87,
                 ),
 
-                // Add these properties
+                // Add these properties to change some colors and style in the textfield
                 floatingLabelStyle: TextStyle(color: SColor.primaryColor),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
