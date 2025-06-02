@@ -36,9 +36,32 @@ class signupScreen extends StatelessWidget {
                         Expanded(
                           child: TextFormField(
                             expands: false,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               labelText: STexts.firstNameLabel,
-                              prefixIcon: Icon(Iconsax.user),
+                              labelStyle: TextStyle(
+                                color: dark ? Colors.white : Colors.black87,
+                              ),
+                              floatingLabelStyle: const TextStyle(
+                                color: SColor.primaryColor,
+                              ),
+
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: dark ? Colors.white : Colors.black87,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: SColor.primaryColor,
+                                  width: 2,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              fillColor:
+                                  dark ? Colors.black : Colors.grey.shade200,
+                              filled: true,
+                              prefixIcon: const Icon(Iconsax.user),
                             ),
                           ),
                         ),
@@ -46,9 +69,32 @@ class signupScreen extends StatelessWidget {
                         Expanded(
                           child: TextFormField(
                             expands: false,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               labelText: STexts.lastNameLabel,
-                              prefixIcon: Icon(Iconsax.user),
+                              labelStyle: TextStyle(
+                                color: dark ? Colors.white : Colors.black87,
+                              ),
+                              floatingLabelStyle: const TextStyle(
+                                color: SColor.primaryColor,
+                              ),
+
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: dark ? Colors.white : Colors.black87,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: SColor.primaryColor,
+                                  width: 2,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              fillColor:
+                                  dark ? Colors.black : Colors.grey.shade200,
+                              filled: true,
+                              prefixIcon: const Icon(Iconsax.user),
                             ),
                           ),
                         ),
