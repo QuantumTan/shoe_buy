@@ -16,4 +16,10 @@ class SImageStrings {
   //socials
   static const String google = "assets/images/google-icon.png";
   static const String facebook = "assets/images/facebook-icon.png";
+
+  //verification screen
+  static const String verifyIllustration =
+      "assets/images/illustrations/emailImage.png";
+  static const String verificationDone =
+      "assets/images/illustrations/successImage.png";
 }
