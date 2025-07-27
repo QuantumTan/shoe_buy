@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:shoe_buy/features/authentication/screens/logIn/logIn.dart';
 import 'package:shoe_buy/features/authentication/screens/signup/success_screen/success_screen.dart';
 import 'package:shoe_buy/utils/constants/image_strings.dart';
@@ -63,7 +61,15 @@ class emailVerificationScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => const SuccessScreen()),
+                  onPressed:
+                      () => Get.to(
+                        () => SuccessScreen(
+                          image: SImageStrings.verificationDone,
+                          title: STexts.signupSuccess,
+                          subTitle: STexts.signupSuccessSubTitle,
+                          onPressed: () => Get.to(() => const LoginScreen()),
+                        ),
+                      ),
                   child: Text(STexts.sContinue),
                 ),
               ),
