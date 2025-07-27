@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shoe_buy/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:shoe_buy/features/authentication/screens/signup/signupScreen.dart';
 import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/sizes.dart';
@@ -85,7 +86,7 @@ class logInForm extends StatelessWidget {
                 ),
                 //forgot
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const ForgetPassword()),
                   child: const Text(
                     STexts.forgotPassword,
                     style: TextStyle(color: SColor.primaryColor),
