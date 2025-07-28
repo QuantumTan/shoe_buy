@@ -84,6 +84,7 @@ class STexts {
   static const String sContinue = "Continue";
   static const String resendEmail = "Resend Email";
   static const String verify = "Verify";
+  static const String done = "Done";
 
   // Additional Sign Up related strings
   static const String firstNameLabel = "First Name";
