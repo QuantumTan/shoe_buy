@@ -41,6 +41,7 @@ class ResetPassword extends StatelessWidget {
               const SizedBox(height: SSizes.spaceBtwSections),
 
               //buttons
+              //done button
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -48,6 +49,16 @@ class ResetPassword extends StatelessWidget {
                   child: const Text(STexts.done),
                 ),
               ),
+              const SizedBox(height: SSizes.spaceBtwItems),
+              //resend buttonm
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: () => Get.off(() => LoginScreen()),
+                  child: const Text(STexts.resendEmail),
+                ),
+              ),
+              const SizedBox(height: SSizes.spaceBtwItems),
             ],
           ),
         ),
