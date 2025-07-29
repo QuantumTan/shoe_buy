@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shoe_buy/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:shoe_buy/features/authentication/screens/signup/signupScreen.dart';
+import 'package:shoe_buy/navigation_menu.dart';
 import 'package:shoe_buy/utils/constants/scolors.dart';
 import 'package:shoe_buy/utils/constants/sizes.dart';
 import 'package:shoe_buy/utils/constants/text_strings.dart';
@@ -85,7 +87,7 @@ class logInForm extends StatelessWidget {
                 ),
                 //forgot
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const ForgetPassword()),
                   child: const Text(
                     STexts.forgotPassword,
                     style: TextStyle(color: SColor.primaryColor),
@@ -100,7 +102,7 @@ class logInForm extends StatelessWidget {
               width: double.infinity,
               height: SSizes.buttonHeight + 30,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => NavMenu()),
                 child: Text(
                   STexts.signIn,
                   style: TextStyle(color: dark ? Colors.black87 : Colors.white),

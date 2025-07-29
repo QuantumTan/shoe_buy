@@ -4,10 +4,7 @@ import 'package:shoe_buy/utils/constants/sizes.dart';
 import 'package:shoe_buy/utils/constants/text_strings.dart';
 
 class logInHeader extends StatelessWidget {
-  const logInHeader({
-    super.key,
-    required this.dark,
-  });
+  const logInHeader({super.key, required this.dark});
 
   final bool dark;
 
